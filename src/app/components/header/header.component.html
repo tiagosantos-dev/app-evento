@@ -1,0 +1,16 @@
+<header id="header">
+    <a routerLink="/" class="logo"><strong>Eventos</strong></a>
+    <div (click)="showSider($event)" class="hamburger"><i class="fa fa-bars"></i></div>
+    <div class="container-div" [ngClass]="{'opensider': sider == true ? true : false}">
+        <nav class="nav">
+            <ul>
+                <li><a (click)="onClick($event)" routerLink="/" class="link">Inicio</a></li>
+                <li><a (click)="onClick($event)" class="link">Esportivos</a></li>
+                <li><a (click)="onClick($event)" class="link">Tecnológicos</a></li>
+                <li><a (click)="onClick($event)" class="link">Seminários</a></li>
+                <li><a (click)="onClick($event)" class="link">Semanais</a></li>
+                <li><a (click)="onClick($event)" class="link">Palestras</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

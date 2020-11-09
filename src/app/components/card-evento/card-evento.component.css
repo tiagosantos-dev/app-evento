@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.identificador-sec {
+    padding: 25px;
+    background-color: var(--redc);
+    width: 250px;
+    margin: 20px 0px;
+}
+
+.cl-default {
+    color: rgb(95 99 104)!important;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.categoria {
+    display: flex;
+}
+
+.categoria .icon {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: linear-gradient(to right, rgb(100, 65, 165), rgb(42, 8, 69));
+}
+
+.categoria .title {
+    margin-left: 16px;
+    width: 100px;
+    height: 25px;
+    z-index: 0px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 14px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.identificador-sec strong {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.text-left {
+    text-align: left!important;
+    margin: 5px;
+}
+
+.card p i {
+    margin-right: 5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10px;
+    width: 350px;
+    color: var(--grey);
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    height: 350px;
+}
+
+.title {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.desc {
+    text-align: center;
+}
+
+.datetime {
+    display: flex
+}
+
+.date {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+.time {
+    margin: 20px auto;
+    font-size: 1.3rem;
+}
+
+.btn-container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn-container a {
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.btn-container a:hover {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn {
+    margin-top: 20px;
+    border: none;
+    padding: 20px;
+    font-size: 1.3rem;
+    transition: all .2s ease-in-out;
+    background-color: var(--grey);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: var(--bluebc);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+    .card {
+        width: auto;
+    }
+}

@@ -1,0 +1,33 @@
+<section id="inscricao">
+    <div class="inscricao-container">
+        <div class="informacoes-container">
+            <div class="qrcode">
+                <qrcode [qrdata]="qrCode" [width]="256" [errorCorrectionLevel]="'M'" [elementType]="'svg'"></qrcode>
+                <p class="nr-inscricao">Numero de Inscrição</p>
+            </div>
+            <div class="informacoes">
+                <ul>
+                    <li class="nome"><i class="far fa-user"></i>
+                        <p>{{participante.nome}}</p>
+                    </li>
+                    <li><i class="fas fa-passport"></i>
+                        <p>{{participante.cpf}}</p>
+                    </li>
+                    <li><i class="far fa-envelope"></i>
+                        <p>{{participante.email}}</p>
+                    </li>
+                    <li><i class="fas fa-mobile-alt"></i>
+                        <p>{{participante.celular}}</p>
+                    </li>
+
+                </ul>
+                <!-- <img class="img" src="{{participante.imagem}}"/> -->
+            </div>
+        </div>
+        <div class="impressao link-btn">
+            <a (click)="onClick($event)">Imprimir</a>
+        </div>
+
+    </div>
+
+</section>

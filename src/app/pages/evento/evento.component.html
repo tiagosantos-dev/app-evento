@@ -1,0 +1,5 @@
+<app-header (dadosEvent)="onClickHeader($event)"></app-header>
+<div class="container">
+    <app-card-evento  *ngFor="let evento of eventos" [evento]="evento"></app-card-evento>
+</div>
+<app-footer></app-footer>

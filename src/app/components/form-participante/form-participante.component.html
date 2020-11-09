@@ -1,0 +1,38 @@
+<section id="form">
+    <form>
+        <div>
+            <h2 class="subtitle">Participe do evento {{titulo}}</h2>
+        </div>
+        <input [(ngModel)]="participante.nome" [ngModelOptions]="{standalone: true}" class="name" type="text"
+            placeholder="Nome" required maxlength="50">
+        <input [(ngModel)]="participante.cpf" [ngModelOptions]="{standalone: true}" class="cpf" type="text"
+            placeholder="CPF" mask="000.000.000-00" required maxlength="14">
+        <input [(ngModel)]="participante.email" [ngModelOptions]="{standalone: true}" class="email" type="email"
+            placeholder="Email" required>
+        <input [(ngModel)]="participante.celular" [ngModelOptions]="{standalone: true}" class="tel" type="tel"
+            placeholder="Celular" mask="(00) 0 0000-0000" required maxlength="20">
+        <label>Selecione uma Imagem:</label>
+        <input #inputImage type="file" (change)="fileChangeEvent($event)" required />
+        <div class="container">
+            <div class="row" style="margin-top: 5%;">
+                <div class="text-center col-md-12">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2%;">
+                <div class="text-center col-md-8">
+                    <div class="recortar">Recortar </div>
+                    <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
+                        [aspectRatio]="4 / 4" [resizeToWidth]="256" format="png" (imageCropped)="imageCropped($event)"
+                        (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()"
+                        (loadImageFailed)="loadImageFailed()"></image-cropper>
+                </div>
+                <div class="text-center col-md-4">
+                    <div class="visualizar">Visualizar</div>
+                    <img [src]="croppedImage" class="img-visualizar" />
+                </div>
+            </div>
+        </div>
+        <img id="img">
+        <a class="btn link-btn" (click)="onClick($event, inputImage )">Cadastrar</a>
+    </form>
+</section>

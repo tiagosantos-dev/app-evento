@@ -1,0 +1,95 @@
+#inscricao {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-family: Raleway, sans-serif;
+}
+
+.qrcode p {
+    text-align: center;
+}
+
+.inscricao-container {
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.informacoes-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes {
+    display: flex;
+}
+
+.informacoes ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.nome {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.informacoes ul li i {
+    margin-right: 10px;
+}
+
+.nr-inscricao {
+    font-weight: bold;
+}
+
+.impressao {
+    display: flex;
+    font-size: 1.2rem;
+    display: block;
+    padding: 20px;
+    float: right;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 300px;
+}
+
+.impressao a {
+    display: block;
+}
+
+@media print {
+    .qrcode svg {}
+    .impressao {
+        display: none;
+    }
+    .informacoes-container {
+        display: -moz-inline-grid;
+        width: 1000%;
+    }
+}
+
+@media(max-width:768px) {
+    #inscricao {
+        height: auto;
+    }
+    .informacoes-container {
+        display: block;
+    }
+    .impressao {
+        display: none;
+    }
+    .inscricao-container {
+        margin-top: 30px;
+    }
+}

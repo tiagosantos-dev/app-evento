@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="categoria">
+        <div class="icon" [ngStyle]="{'background': backgroundIcon(evento.categoria)}">
+            <i class="fas {{icon}}"></i>
+        </div>
+        <div class="title">{{evento.categoria}}</div>
+    </div>
+    <strong class="cl-default text-left">{{evento.nome}} </strong>
+    <p class=" text-left">{{evento.descricao}}</p>
+    <p class=" text-left"> <i class="far fa-calendar-alt"></i>{{evento.date}}</p>
+    <p class=" text-left"> <i class="fas fa-map-marker-alt"></i>{{evento.local}}</p>
+    <p class=" text-left"><i class="far fa-clock"></i>{{evento.time}}</p>
+    <div class="btn-container">
+        <a routerLink="/cadastrar" [queryParams]="{'nomeEvento': evento.nome, 'eventoId':evento.id}"
+            class="link-btn">Participar</a>
+
+    </div>
+</div>
